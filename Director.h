@@ -9,6 +9,6 @@ public:
 
 	Director();
 	void setBuilder(Builder* newBuilder);
-	CAR* getCar();
+	CAR getCar();
 	~Director();
 };

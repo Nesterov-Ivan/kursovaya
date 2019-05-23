@@ -14,4 +14,6 @@ public:
 	virtual transmission* Get_transmission() = 0;
 	virtual consumption* Get_consumption() = 0;
 	virtual trunk* Get_trunk() = 0;
+	void proverka1(char pr[20]);
+	void proverka2(char pr[10]);
 };

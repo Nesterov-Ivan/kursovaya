@@ -18,7 +18,7 @@ private:
 	trunk* tRUNK;
 public:
 	CAR();
-	CAR* read_file(const string name_fail, int k);
+	void read_file(const string name_fail, int k);
 	color* COLOR();
 	price* PRICE();
 	type_engine* TYPE_ENGINE();

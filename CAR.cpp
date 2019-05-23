@@ -19,9 +19,8 @@ CAR::CAR()
 
 }
 
-CAR* CAR::read_file(const string name_fail, int k)
+void CAR::read_file(const string name_fail, int k)
 {
-	CAR* car = new CAR;
 	try
 	{
 		ifstream file1(name_fail);
@@ -45,33 +44,33 @@ CAR* CAR::read_file(const string name_fail, int k)
 
 		for (int j = 0; j <= k; j++) {
 			file1 >> COLOR->COLOR;
-			car->cOLOR = COLOR;
+			cOLOR = COLOR;
 			file1 >> PRICE->cena;
-			car->pRICE = PRICE;
+			pRICE = PRICE;
 			file1 >> TYPE->type;
-			car->tYPE_ENGINE = TYPE;
+			tYPE_ENGINE = TYPE;
 			file1 >> POWER->POWER;
-			car->pOWER = POWER;
+			pOWER = POWER;
 			file1 >> YEAR->YEAR;
-			car->yEAR = YEAR;
+			yEAR = YEAR;
 			file1 >> BRAND->BRAND;
-			car->bRAND = BRAND;
+			bRAND = BRAND;
 			file1 >> MODEL->MODEL;
-			car->mODEL = MODEL;
+			mODEL = MODEL;
 			file1 >> DIMENSIONS->size;
-			car->dIMENSIONS[0] = DIMENSIONS;
+			dIMENSIONS[0] = DIMENSIONS;
 			file1 >> DIMENSIONS->size;
-			car->dIMENSIONS[1] = DIMENSIONS;
+			dIMENSIONS[1] = DIMENSIONS;
 			file1 >> DIMENSIONS->size;
-			car->dIMENSIONS[2] = DIMENSIONS;
+			dIMENSIONS[2] = DIMENSIONS;
 			file1 >> FUEL->FUEL;
-			car->fUEL = FUEL;
+			fUEL = FUEL;
 			file1 >> TRANSMISSION->TRANSMISSION;
-			car->tRANSMISSION = TRANSMISSION;
+			tRANSMISSION = TRANSMISSION;
 			file1 >> CONSUMPTION->CONSUMPTION;
-			car->cONSUMPTION = CONSUMPTION;
+			cONSUMPTION = CONSUMPTION;
 			file1 >> TRUNK->TRUNK;
-			car->tRUNK = TRUNK;
+			tRUNK = TRUNK;
 		}
 		file1.close();
 	}
@@ -79,7 +78,6 @@ CAR* CAR::read_file(const string name_fail, int k)
 	{
 		cout << "Oshibka otkritiya faila!" << endl;
 	}
-	return car;
 }
 
 color * CAR::COLOR()
@@ -163,16 +161,4 @@ void CAR::specification()
 CAR::~CAR()
 {
 	cout << "CAR#" << endl;
-	delete cOLOR;
-	delete pRICE;
-	delete tYPE_ENGINE;
-	delete pOWER;
-	delete yEAR;
-	delete bRAND;
-	delete mODEL;
-	delete[] dIMENSIONS;
-	delete fUEL;
-	delete tRANSMISSION;
-	delete cONSUMPTION;
-	delete tRUNK;
 }

@@ -4,9 +4,9 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include <iostream>
 #include <fstream>
 #include <Windows.h>
 #include <stdlib.h>
+#include <iostream>
 
 using namespace std;
